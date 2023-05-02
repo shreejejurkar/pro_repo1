@@ -12,12 +12,12 @@ pipeline {
                 script {
                     dir('terraform') {
                         sh "terraform init"
-                        sh "terraform apply -auto-approve"
+                        sh "terraform destroy -auto-approve"
                     }
                 }
             }
         }
-        stage("Deploy to EKS") {
+ /*       stage("Deploy to EKS") {
             steps {
                 script {
                     dir('kubernetes') {
@@ -29,4 +29,4 @@ pipeline {
             }
         }
     }
-}
+}*/
